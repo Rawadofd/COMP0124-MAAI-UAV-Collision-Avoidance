@@ -6,7 +6,7 @@ from openrl.runners.common import PPOAgent as Agent
 from openrl.envs.wrappers import GIFWrapper # used to generate gif
 def test():
     # Create MPE environment.
-    env = make("simple_spread", env_num=9)
+    env = make("simple_spread", env_num=1)
     # Use GIFWrapper to generate gifs.
     env = GIFWrapper(env, "ppo.gif")
     agent = Agent(Net(env))  # Create an intelligent agent.
