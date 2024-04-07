@@ -69,28 +69,32 @@ class Scenario(BaseScenario):
 
         # =================================== #
         # Set the position of agent
-        # agent_p = np.array([[-0.5, 0.5], [0.3, -0.6], [0.7, -0.1]])
-        # for i, agent in enumerate(world.agents):
-        #     agent.state.p_pos = agent_p[i]
-        #     agent.state.p_vel = np.zeros(world.dim_p)
-        #     agent.state.c = np.zeros(world.dim_c)
-        for agent in world.agents:
-            agent.state.p_pos = np_random.uniform(-1, +1, world.dim_p)
+        agent_p = np.array([[-0.5, 0.5], [0.3, -0.6], [0.7, -0.1]])
+        for i, agent in enumerate(world.agents):
+            agent.state.p_pos = agent_p[i]
             agent.state.p_vel = np.zeros(world.dim_p)
             agent.state.c = np.zeros(world.dim_c)
+        # =================================== #
+        # Use the random generated position
+        # for agent in world.agents:
+        #     agent.state.p_pos = np_random.uniform(-1, +1, world.dim_p)
+        #     agent.state.p_vel = np.zeros(world.dim_p)
+        #     agent.state.c = np.zeros(world.dim_c)
 
         # =================================== #
         # Set the position of obstacles and landmarks 
-        # landmark_p = np.array([[-0.2, -0.1], [0, 0], [0.2, 0.2], [-0.2, 0.2], [0.2, -0.2]])
-        # for i, landmark in enumerate(world.landmarks):
-        #     landmark.state.p_pos = landmark_p[i]
-        #     landmark.state.p_vel = np.zeros(world.dim_p)
+        landmark_p = np.array([[-0.2, -0.1], [0, 0], [0.2, 0.2], [-0.2, 0.2], [0.2, -0.2]])
         for i, landmark in enumerate(world.landmarks):
-            if landmark.collide == False:
-                landmark.state.p_pos = 0.8 * np.random.uniform(-1, +1, world.dim_p)
-            else:
-                landmark.state.p_pos = np.random.uniform(-1, +1, world.dim_p)
+            landmark.state.p_pos = landmark_p[i]
             landmark.state.p_vel = np.zeros(world.dim_p)
+        # =================================== #
+        # Use the random generated position
+        # for i, landmark in enumerate(world.landmarks):
+        #     if landmark.collide == False:
+        #         landmark.state.p_pos = 0.8 * np.random.uniform(-1, +1, world.dim_p)
+        #     else:
+        #         landmark.state.p_pos = np.random.uniform(-1, +1, world.dim_p)
+        #     landmark.state.p_vel = np.zeros(world.dim_p)
 
     def benchmark_data(self, agent, world):
         rew = 0
