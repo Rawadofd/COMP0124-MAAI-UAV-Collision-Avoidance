@@ -21,6 +21,13 @@ python3 test_ppo.py
 ```
 
 The gif file ```ppo.gif``` recorded the whole environment and actions of agents derived from trained MAPPO.
+
+When keeping the current setting in ```simple_spread.py```, a fixed environment will be generated as follow
+<div align="center">
+  <img src="openrl/examples/mpe/ppo_fixed_env.gif"></a>
+</div>
+
+By changing the initial fixed states in environment to the random sampled case, the result will be
 <div align="center">
   <img src="openrl/examples/mpe/ppo.gif"></a>
 </div>
