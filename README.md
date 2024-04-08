@@ -20,7 +20,7 @@ cd openrl/examples/mpe/
 python3 test_ppo.py
 ```
 
-The gif file ```ppo.gif``` recorded the whole environment and actions of agents derived from trained MAPPO.
+The gif file ```ppo.gif``` recorded the whole environment and actions of agents derived from trained MAPPO model.
 
 When keeping the current setting in ```simple_spread.py```, a fixed environment will be generated as follow
 <div align="center">
