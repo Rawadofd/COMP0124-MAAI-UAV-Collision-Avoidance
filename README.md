@@ -24,10 +24,10 @@ The gif file ```ppo.gif``` recorded the whole environment and actions of agents 
 
 When keeping the current setting in ```simple_spread.py```, a fixed environment will be generated as follow
 <div align="center">
-  <img src="openrl/examples/mpe/ppo_fixed_env.gif"></a>
+  <img src="openrl/examples/mpe/ppo_fixed_env.gif" height="200" width="200"></a>
 </div>
 
 By changing the initial fixed states in environment to the random sampled case, the result will be
 <div align="center">
-  <img src="openrl/examples/mpe/ppo.gif"></a>
+  <img src="openrl/examples/mpe/ppo.gif" height="500" width="500"></a>
 </div>
